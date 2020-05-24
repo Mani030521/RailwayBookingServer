@@ -16,9 +16,9 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-app.use("/", (req, res) => {
-    res.send(" Welcome to Railway booking service ");
-});
+// app.use("/", (req, res) => {
+//     res.send(" Welcome to Railway booking service ");
+// });
 app.use("/admin", adminRoutes);
 app.use("/user", userRoutes);
 app.use("/trains", trainRoutes);
