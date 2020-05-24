@@ -4,6 +4,7 @@ const adminRoutes = require("./Admin/Routes");
 const userRoutes = require("./User/Routes");
 const ticketRoutes = require("./Ticketing/Routes");
 const trainRoutes = require("./Train/Routes");
+const homeRoute = require("./HomeRoute");
 
 const app = express();
 
@@ -16,9 +17,7 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-// app.use("/", (req, res) => {
-//     res.send(" Welcome to Railway booking service ");
-// });
+app.use("/", homeRoute);
 app.use("/admin", adminRoutes);
 app.use("/user", userRoutes);
 app.use("/trains", trainRoutes);
